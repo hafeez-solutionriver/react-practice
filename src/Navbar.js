@@ -1,30 +1,32 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+export default function Navbar(){
 
-export default class Navbar extends React.Component{
 
-   render(){
+  const navigation = useNavigate()
+  
     return (
 
         <nav className="navbar  navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid bg-secondary">
-    <a className="navbar-brand" href="#">
+    <a className="navbar-brand" href="#" onClick={()=>navigation('/')}>
       Hafeez Work
     </a>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
+          <a className="nav-link active" aria-current="page" href="#" onClick={()=>navigation('/')}>
             Counter
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="#" onClick={()=>navigation('calculator')}>
             Calculator
           </a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="#" onClick={()=>navigation('tictactoe')}>
             Tic Tac Toe
           </a>
         </li>
@@ -40,5 +42,5 @@ export default class Navbar extends React.Component{
    }
 
     
-}
+
 

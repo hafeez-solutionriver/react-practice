@@ -1,36 +1,30 @@
 
-import { useState } from "react";
+
+import Home from "./Home";
 import Navbar from "./Navbar";
-import Counter from "./Counter"
-import CounterFuncion from "./CounterFunction";
-import ProductList from "./ProductList";
-import Form from "./Form";
-import obj from "./UseEffect"
+import TicTacToe from "./TicTacToe";
+import Calculator from "./Calculator";
+
+import {Routes,Route} from "react-router-dom"
+
 
 
 function App() {
   
-  const {Timer} = obj
-
-const [displayName,setDisplayName] = useState("Name:1")
-
-function udpatedDisplayName(val)
-{
-  setDisplayName(val)
-}
 
   
   return (
     <div >
-      <Timer/>
+      
       <Navbar/>
-      <Form/>
-      <Counter name="dummy">
-        <h1>Hello Buddy</h1>
-      </Counter>
-      <CounterFuncion update={udpatedDisplayName} name={displayName}/>
+      <Routes>
 
-<ProductList/>
+      <Route path="/"element={<Home/>} />
+      <Route path="tictactoe"element={<TicTacToe/>} />
+      <Route path="calculator"element={<Calculator/>} />
+
+      </Routes>
+     
 
 
     </div>
