@@ -3,7 +3,8 @@
 import Home from "./Home";
 import Navbar from "./Navbar";
 import TicTacToe from "./TicTacToe";
-import Calculator from "./Calculator";
+import GeneralCounterForRenderProps from "./GeneralCounterForRenderProps";
+import GeneralCounterForHOC from "./GeneralCounterForHOC";
 
 import {Routes,Route} from "react-router-dom"
 
@@ -21,8 +22,8 @@ function App() {
 
       <Route path="/"element={<Home/>} />
       <Route path="tictactoe"element={<TicTacToe/>} />
-      <Route path="calculator"element={<Calculator/>} />
-
+      <Route path="renderprops"element={<GeneralCounterForRenderProps/>} />
+      <Route path="counter"element={<GeneralCounterForHOC/>} />
       </Routes>
      
 
