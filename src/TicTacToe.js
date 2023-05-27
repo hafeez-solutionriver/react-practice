@@ -1,5 +1,6 @@
+import ComponentA from "./ComponentA";
 function TicTacToe() {
-    return ( <h1>TicTacToe</h1> );
+    return ( <ComponentA />);
 }
 
 export default TicTacToe;

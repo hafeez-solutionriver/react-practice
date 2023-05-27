@@ -68,3 +68,90 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+At first time
+git config --global user.name Hafeez
+git config --global user.email hafeez.solutionriver@gmail.com
+
+Two ways for working with repo..
+1-init (Creating from scratch)
+2-clone(Make availabel whole repo on system)
+
+Few states.
+=> Untracked - Means github does not concern with them and we have to add the files in staged state.
+git add [filename] this would add into staging area.
+git commit
+now press esc and :wq and enter.
+git add -A for adding all untracked files.
+In order to avoid "now press esc and :wq and enter."
+Jus enter git commit -m "Added changes"
+=> Unmodified- It says you have committed the files.
+=> Modified - It says you have modified the files now stage them and commit them.
+
+git checkout [filename]
+git checkout -f (for all files)
+This would recoever the last commit.
+
+git log 
+git log  -p -[# of commit do you want to see]
+git diff (comapre working tree with staging area)
+git diff -- stage (compare stagin area with last commit)
+
+git commit -a -m (This would directly commit so
+ that we do not need to first put everything
+ inside stage state then commit)
+
+git rm [filename] This would remove the from working
+and staging area.
+
+git rm --cached(Make tracked file untracked)
+ This would only reomve from stage
+area not from disk.
+
+git status -s
+[this box is for staging area][this for working area] filename
+
+Now git ignore (Files which we do not want to track)
+make a file with .gitignore extension
+And just write a filename which we want  to ignore.
+
+Branches
+git branch [branchName] create a branch
+git checkout [branchName] change branch
+
+Remote repository
+Now add remote repository after creating your
+repository on github.
+git remote add origin [Link]
+git push origin master
+git clone '' [folder name otherwise it would
+create the folder with name of repo]
+
+-Create a repo
+-Copy link(this will create a new folder with repo name)
+git clone ----(link)----
+-copy all files into that fodler
+-git status -s
+-git add .
+-git commit -m "Dummy Message"
+-git push 
+
+
+git branch: List all branches in the repository.
+git branch <branch-name>: Create a new branch.
+git checkout <branch-name>: Switch to the specified branch.
+git checkout -b <branch-name>: Create and switch to a new branch.
+git merge <branch-name>: Merge changes from the specified branch into the current branch.
+git status: Check the status of the repository, including information about conflicts.
+git diff: View the differences between branches or files.
+git add <file>: Stage a modified file for the next commit.
+git commit: Commit the changes, including conflict resolutions, after a merge.
+
+You have made some modifications to your files, but they are not ready to be committed.
+Run git stash to save your changes to a stash.
+Your working directory is reverted back to a clean state.
+Switch branches, pull changes, or perform any other necessary operations.
+Return to your original branch.
+Retrieve your stashed changes using git stash apply or git stash pop.
+git stash apply keeps the stash intact for future use.
+git stash pop applies the stash and removes it from the stash list.
